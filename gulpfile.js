@@ -9,18 +9,18 @@ gulp.task('styles', function () {
 
   return gulp.src([
     'less/style.less'
-  , 'less/themes/*.less'
+  //, 'less/themes/*.less'
   ], {base: 'less'})
     .pipe($.plumber())
     .pipe($.less())
     .pipe($.autoprefixer())
-    .pipe($.csso())
-    .pipe(themes)
-    .pipe($.rename({
-      dirname: '/'
-    , prefix: 'custom_'
-    }))
-    .pipe(themes.restore())
+    //.pipe($.csso())
+    //.pipe(themes)
+    //.pipe($.rename({
+    //  dirname: '/'
+    //, prefix: 'custom_'
+    //}))
+    //.pipe(themes.restore())
     .pipe(gulp.dest('design'))
     .pipe($.size({showFiles: true}));
 });
@@ -34,7 +34,7 @@ gulp.task('scripts', function () {
   ]))
     .pipe($.plumber())
     .pipe($.concat('custom.js'))
-    .pipe($.uglify())
+    //.pipe($.uglify())
     .pipe(gulp.dest('js'))
     .pipe($.size({showFiles: true}));
 });
@@ -46,6 +46,29 @@ gulp.task('wiredep', function () {
     .pipe(wiredep())
     .pipe(gulp.dest('less'));
 });
+
+function deploydir(dir) {
+  return gulp.src(dir + '/*')
+    .pipe($.scp({
+      host: 'tkl',
+      user: 'root',
+      path: '/home/www.qweni.be/themes/qweni-theme/' + dir + '/'
+    }));
+}
+
+gulp.task('deploystyles', ['styles'], function() {
+  return deploydir('design');
+});
+
+gulp.task('deployjs', ['scripts'], function() {
+  return deploydir('js');
+});
+
+gulp.task('deployviews', function() {
+  return deploydir('views');
+});
+
+gulp.task('deploy', ['deploystyles', 'deployjs', 'deployviews']);
 
 gulp.task('default', ['styles', 'scripts']);
 
@@ -60,8 +83,9 @@ gulp.task('watch',  function () {
     return server.changed(file.path);
   });
 
-  gulp.watch('less/**/*.less', ['styles']);
-  gulp.watch('js/src/**/*.js', ['scripts']);
+  gulp.watch('less/**/*.less', ['styles', 'deploystyles']);
+  gulp.watch('js/src/**/*.js', ['scripts', 'deployscripts']);
+  gulp.watch('js/views/**/*.tpl', ['deployviews']);
   gulp.watch('bower.json', ['wiredep']);
 });
 

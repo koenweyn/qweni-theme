@@ -6,6 +6,7 @@
     {asset name="Head"}
   </head>
   <body id="{$BodyID}" class="{$BodyClass} sticky-footer-body">
+    <section class="header"></section>
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">

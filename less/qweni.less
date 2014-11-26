@@ -1,0 +1,34 @@
+.header {
+//  .container();
+//  background-position-x: -15px;
+  background: url("header.png") no-repeat left;
+  background-size: 750px auto;
+  height: 152px;
+
+  @media (min-width: @screen-sm-min) {
+    background-position: center;
+    background-size: 750px auto;
+    height: 152px;
+  }
+  @media (min-width: @screen-md-min) {
+    background-position: center;
+    background-size: 970px auto;
+    height: 198px;
+  }
+  @media (min-width: @screen-lg-min) {
+    background-position: center;
+    background-size: 1170px 240px;
+    height: 240px;
+  }
+
+
+
+
+
+}
+
+
+
+//768px -> 720px + 30px = 750px
+//992px -> 940px + 30px = 970px
+//1200px -> 1140px + 30px = 1170px (1080x245)
