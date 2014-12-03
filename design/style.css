@@ -11065,29 +11065,69 @@ img.jcrop-preview {
   color: #772953;
 }
 .header {
-  background: url("header.png") no-repeat;
-  background-position: left;
-  background-size: 750px auto;
-  height: 152px;
+  height: 126px;
+  background: #fcfaf6 url("muur.jpg") no-repeat center;
+  background-size: auto 126px;
+}
+.header .logo {
+  width: 166px;
+  height: 126px;
+  margin: 0 auto;
+}
+.header .logo img {
+  content: url("logo.png");
+  width: 100%;
+  height: 100%;
 }
 @media (min-width: 768px) {
-  .header {
-    background-position: center;
-    background-size: 750px auto;
-    height: 152px;
+  .header .logo {
+    float: left !important;
+    float: left;
+    margin: 0;
+  }
+  .header .aapjes {
+    float: right !important;
+    float: right;
+    width: 378px;
+    height: 126px;
+    background: url('aapjes.tiny.png') no-repeat right;
+    background-size: contain;
   }
 }
 @media (min-width: 992px) {
   .header {
-    background-position: center;
-    background-size: 970px auto;
-    height: 198px;
+    height: 164px;
+    background-size: auto 164px;
+  }
+  .header .logo {
+    width: 218px;
+    height: 164px;
+  }
+  .header .aapjes {
+    width: 494px;
+    height: 164px;
+  }
+}
+@media (min-width: 992px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 992px) and (min-resolution: 192dpi) {
+  .header .logo img {
+    content: url("logo@2x.png");
   }
 }
 @media (min-width: 1200px) {
   .header {
-    background-position: center;
-    background-size: 1170px 240px;
-    height: 240px;
+    height: 200px;
+    background-size: auto 200px;
   }
+  .header .logo {
+    width: 264px;
+    height: 200px;
+  }
+  .header .aapjes {
+    width: 600px;
+    height: 200px;
+  }
+}
+.navbar-toggle {
+  float: left;
+  margin-left: 15px;
 }

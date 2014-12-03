@@ -70,7 +70,7 @@ gulp.task('deployviews', function() {
 
 gulp.task('deploy', ['deploystyles', 'deployjs', 'deployviews']);
 
-gulp.task('default', ['styles', 'scripts']);
+gulp.task('default', ['styles', 'scripts', 'deploy']);
 
 gulp.task('watch',  function () {
   var server = $.livereload();
@@ -83,9 +83,9 @@ gulp.task('watch',  function () {
     return server.changed(file.path);
   });
 
-  gulp.watch('less/**/*.less', ['styles', 'deploystyles']);
+  gulp.watch(['less/**/*.less', 'design/**/*.@(jpg|png)'], ['styles', 'deploystyles']);
   gulp.watch('js/src/**/*.js', ['scripts', 'deployscripts']);
-  gulp.watch('js/views/**/*.tpl', ['deployviews']);
+  gulp.watch('views/**/*.tpl', ['deployviews']);
   gulp.watch('bower.json', ['wiredep']);
 });
 

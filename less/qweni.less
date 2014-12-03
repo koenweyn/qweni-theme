@@ -1,34 +1,101 @@
+@import "../bower_components/bootstrap/less/mixins";
+
+@header-bg: #fcfaf6;
+
+//720: 126 : 166 : 378
+//940: 164 : 218 : 494
+//1140: 200 : 264 : 600
+
+@header-height: 126px;
+@header-height-md: 164px;
+@header-height-lg: 200px;
+
+@logo-width: 166px;
+@logo-height: @header-height;
+@logo-width-md: 218px;
+@logo-height-md: @header-height-md;
+@logo-width-lg: 264px;
+@logo-height-lg: @header-height-lg;
+
+@aapjes-width: 378px;
+@aapjes-height: @header-height;
+@aapjes-width-md: 494px;
+@aapjes-height-md: @header-height-md;
+@aapjes-width-lg: 600px;
+@aapjes-height-lg: @header-height-lg;
+
 .header {
-//  .container();
-//  background-position-x: -15px;
-  background: url("header.png") no-repeat left;
-  background-size: 750px auto;
-  height: 152px;
+  height: @header-height;
+  background: @header-bg url("muur.jpg") no-repeat center;
+  background-size: auto @header-height;
+
+  .logo {
+    width: @logo-width;
+    height: @logo-height;
+    margin: 0 auto;
+//    margin-left: auto;
+
+    img {
+      content:url("logo.png");
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   @media (min-width: @screen-sm-min) {
-    background-position: center;
-    background-size: 750px auto;
-    height: 152px;
+    .logo {
+      .pull-left();
+      margin: 0;
+    }
+
+    .aapjes {
+      .pull-right();
+      width: @aapjes-width;
+      height: @aapjes-height;
+      background: url('aapjes.tiny.png') no-repeat right;
+      background-size: contain;
+    }
+
   }
+
   @media (min-width: @screen-md-min) {
-    background-position: center;
-    background-size: 970px auto;
-    height: 198px;
+    height: @header-height-md;
+    background-size: auto @header-height-md;
+
+    .logo {
+      width: @logo-width-md;
+      height: @logo-height-md;
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        //only load retina logo from md onwards
+        img {
+          content:url("logo@2x.png");
+        }
+      }
+    }
+    .aapjes {
+      width: @aapjes-width-md;
+      height: @aapjes-height-md;
+    }
   }
+
   @media (min-width: @screen-lg-min) {
-    background-position: center;
-    background-size: 1170px 240px;
-    height: 240px;
+    height: @header-height-lg;
+    background-size: auto @header-height-lg;
+
+    .logo {
+      width: @logo-width-lg;
+      height: @logo-height-lg;
+    }
+    .aapjes {
+      width: @aapjes-width-lg;
+      height: @aapjes-height-lg;
+    }
   }
-
-
-
-
 
 }
 
-
-
-//768px -> 720px + 30px = 750px
-//992px -> 940px + 30px = 970px
-//1200px -> 1140px + 30px = 1170px (1080x245)
+.navbar-toggle {
+  float: left;
+  margin-left: 15px;
+}

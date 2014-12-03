@@ -6,7 +6,12 @@
     {asset name="Head"}
   </head>
   <body id="{$BodyID}" class="{$BodyClass} sticky-footer-body">
-    <section class="header"></section>
+    <section class="header">
+      <div class="container">
+        <div class="logo"><a href="/"><img title="Qweni"/></a></div>
+        <div class="aapjes hidden-xs"></div>
+      </div>
+    </section>
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -16,7 +21,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{link path="home"}">{logo}</a>
+          {*<a class="navbar-brand hidden-sm" href="{link path="home"}">{logo}</a>*}
         </div>
 
         <div class="navbar-collapse collapse">
