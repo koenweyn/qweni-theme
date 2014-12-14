@@ -1,4 +1,6 @@
-@import "../bower_components/bootstrap/less/mixins";
+@import url("//fonts.googleapis.com/css?family=Ubuntu");
+
+@import "variables.less";
 
 @header-bg: #fcfaf6;
 
@@ -99,3 +101,33 @@
   float: left;
   margin-left: 15px;
 }
+
+.BigButton {
+  .button-size(@padding-base-vertical; @padding-base-horizontal; 16px; @line-height-base; @border-radius-base);
+}
+
+.page-content {
+  .make-sm-column(8);
+  .make-md-column(9);
+}
+
+.page-sidebar {
+  .make-sm-column(4);
+  .make-md-column(3);
+}
+
+@media (max-width: @screen-md) {
+  .MessageList .Item, .MessageForm {
+    margin-left: 0;
+  }
+
+  .MessageForm .Buttons {
+    display: block;
+    &:after{
+      content: ".";
+      clear: left;
+    }
+  }
+}
+
+
