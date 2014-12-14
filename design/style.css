@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Ubuntu");
+@import url("//fonts.googleapis.com/css?family=Ubuntu:400,500,700");
 /*!
  * Bootstrap for Vanilla
  *
@@ -11119,10 +11119,12 @@ img.jcrop-preview {
     height: 200px;
   }
 }
+/*
 .navbar-toggle {
   float: left;
   margin-left: 15px;
 }
+*/
 .BigButton {
   padding: 8px 12px;
   font-size: 16px;
@@ -11165,6 +11167,35 @@ img.jcrop-preview {
     width: 25%;
   }
 }
+.page-sidebar .BoxDiscussions {
+  display: none;
+}
+.page-sidebar .Box#RecentActivity {
+  display: none;
+}
+.navbar a.home {
+  padding-top: 12px;
+  padding-bottom: 13px;
+}
+.navbar a.home i.fa-home {
+  font-size: 24px;
+}
+.navbar a.MeButton .Sprite.Sprite16 {
+  font-size: 16px;
+}
+.SpFlyoutHandle {
+  font-size: 16px;
+}
+.Button {
+  margin-top: 6px;
+}
+.Button:first-child {
+  margin-top: 0;
+}
+h1#PageTitle .options {
+  display: inline-block;
+  float: right;
+}
 @media (max-width: 992px) {
   .MessageList .Item,
   .MessageForm {
@@ -11173,7 +11204,8 @@ img.jcrop-preview {
   .MessageForm .Buttons {
     display: block;
   }
-  .MessageForm .Buttons::after {
+  .MessageForm .Buttons:after {
+    content: ".";
     clear: left;
   }
 }

@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Ubuntu");
+@import url("//fonts.googleapis.com/css?family=Ubuntu:400,500,700");
 
 @import "variables.less";
 
@@ -97,10 +97,12 @@
 
 }
 
+/*
 .navbar-toggle {
   float: left;
   margin-left: 15px;
 }
+*/
 
 .BigButton {
   .button-size(@padding-base-vertical; @padding-base-horizontal; 16px; @line-height-base; @border-radius-base);
@@ -114,7 +116,50 @@
 .page-sidebar {
   .make-sm-column(4);
   .make-md-column(3);
+
+  //hide recent discussions (used in custom pages)
+  .BoxDiscussions {
+    display: none;
+  }
+
+  .Box#RecentActivity {
+    display: none;
+  }
 }
+
+.navbar {
+  a.home {
+    padding-top: 12px;
+    padding-bottom: 13px;
+
+    i.fa-home {
+      font-size: 24px;
+    }
+  }
+
+  a.MeButton {
+    .Sprite.Sprite16 {
+      font-size: 16px;
+    }
+  }
+}
+
+.SpFlyoutHandle {
+  font-size: 16px;
+}
+
+.Button {
+  margin-top: 6px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1#PageTitle .options {
+  display: inline-block;
+  float: right;
+}
+
 
 @media (max-width: @screen-md) {
   .MessageList .Item, .MessageForm {

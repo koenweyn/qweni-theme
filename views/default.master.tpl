@@ -26,6 +26,8 @@
 
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
+            <li><a href="/" title="Home" class="home"><i class="fa fa-home"></i></a></li>
+
             {categories_link}
             {discussions_link}
             {activity_link}
