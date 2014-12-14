@@ -11192,9 +11192,36 @@ img.jcrop-preview {
 .Button:first-child {
   margin-top: 0;
 }
-h1#PageTitle .options {
+h1#PageTitle .Options {
   display: inline-block;
   float: right;
+}
+#PageBody h1,
+#PageBody .h1 {
+  font-size: 24px;
+}
+#PageBody h2,
+#PageBody .h2 {
+  font-size: 18px;
+}
+#PageBody h3,
+#PageBody .h3 {
+  font-size: 14px;
+}
+#PageBody h4,
+#PageBody .h4 {
+  font-size: 12px;
+}
+#PageBody h5,
+#PageBody .h5 {
+  font-size: 12px;
+}
+#PageBody h6,
+#PageBody .h6 {
+  font-size: 12px;
+}
+.important {
+  color: #e18e05;
 }
 @media (max-width: 992px) {
   .MessageList .Item,

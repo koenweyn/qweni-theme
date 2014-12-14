@@ -72,6 +72,8 @@
       <div class="container">
         <div class="clearfix">
           <p class="pull-left">{t c="Copyright"} &copy; {$smarty.now|date_format:"%Y"} <a href="{link path="home"}">{logo}</a></p>
+          <p class="pull-right"><!--suppress HtmlUnknownTarget -->
+            <a href="/disclaimer">Disclaimer</a></p>
 {*
           <p class="pull-right hidden-xs">{t c="Built with"} <i class="InformSprite Heart"></i> {t c="and"} <a href="http://getbootstrap.com">Bootstrap</a>. {t c="Powered by"} <a href="{vanillaurl}">Vanilla Forums</a>
             <!-- A lot of time was put into this project - a "Follow" and a "Star" would be most appreciated! -->
