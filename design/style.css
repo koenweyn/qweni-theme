@@ -11186,12 +11186,6 @@ img.jcrop-preview {
 .SpFlyoutHandle {
   font-size: 16px;
 }
-.Button {
-  margin-top: 6px;
-}
-.Button:first-child {
-  margin-top: 0;
-}
 h1#PageTitle .Options {
   display: inline-block;
   float: right;
