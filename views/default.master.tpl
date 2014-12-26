@@ -62,7 +62,7 @@
           {asset name="Content"}
         </main>
 
-        <aside class="page-sidebar" role="complementary">
+        <aside class="page-sidebar hidden-xs" role="complementary">
           {asset name="Panel"}
         </aside>
       </div>
