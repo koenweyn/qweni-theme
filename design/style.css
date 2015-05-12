@@ -11220,11 +11220,16 @@ h1#PageTitle .Options {
 .User-ShowEmail {
   display: none;
 }
-label[for='Form_Email']:after,
-label[for='Form_Name']:after,
-label[for='Form_Password']:after,
-label[for='Form_PasswordMatch']:after,
-label[for='Form_SecurityCheck']:after {
+#dashboard_profile_edit label[for='Form_Email']:after,
+#dashboard_entry_register label[for='Form_Email']:after,
+#dashboard_profile_edit label[for='Form_Name']:after,
+#dashboard_entry_register label[for='Form_Name']:after,
+#dashboard_profile_edit label[for='Form_Password']:after,
+#dashboard_entry_register label[for='Form_Password']:after,
+#dashboard_profile_edit label[for='Form_PasswordMatch']:after,
+#dashboard_entry_register label[for='Form_PasswordMatch']:after,
+#dashboard_profile_edit label[for='Form_SecurityCheck']:after,
+#dashboard_entry_register label[for='Form_SecurityCheck']:after {
   content: ' *';
   color: red;
 }
