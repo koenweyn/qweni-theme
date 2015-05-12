@@ -11220,6 +11220,20 @@ h1#PageTitle .Options {
 .User-ShowEmail {
   display: none;
 }
+label[for='Form_Email']:after,
+label[for='Form_Name']:after,
+label[for='Form_Password']:after,
+label[for='Form_PasswordMatch']:after,
+label[for='Form_SecurityCheck']:after {
+  content: ' *';
+  color: red;
+}
+#dashboard_profile_edit .Buttons:before,
+#dashboard_entry_register .Buttons:before {
+  content: '* Deze velden zijn verplicht';
+  display: block;
+  padding-bottom: 10px;
+}
 @media (min-width: 768px) {
   .CommentsWrap {
     padding-left: 20px;
