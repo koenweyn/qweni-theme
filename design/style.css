@@ -11217,6 +11217,9 @@ h1#PageTitle .Options {
 .important {
   color: #e18e05;
 }
+.User-ShowEmail {
+  display: none;
+}
 @media (min-width: 768px) {
   .CommentsWrap {
     padding-left: 20px;
