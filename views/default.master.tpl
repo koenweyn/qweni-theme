@@ -74,8 +74,8 @@
           <p class="pull-left">{t c="Copyright"} &copy; {$smarty.now|date_format:"%Y"} <a href="{link path="home"}">{logo}</a>
           </p>
           <p class="pull-left supporters">
-            met de steun van <img src="themes/qweni-theme/design/a.jpg" alt="Stad Antwerpen">
-            en <img src="themes/qweni-theme/design/kwadraat.jpg" alt="Kwadraat">
+            met de steun van <img src="/themes/qweni-theme/design/a.jpg" alt="Stad Antwerpen">
+            en <img src="/themes/qweni-theme/design/kwadraat.jpg" alt="Kwadraat">
           </p>
           <p class="pull-right"><!--suppress HtmlUnknownTarget -->
             <a href="/disclaimer">Disclaimer</a></p>
