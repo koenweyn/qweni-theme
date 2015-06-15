@@ -2,7 +2,19 @@
 
 @import "variables.less";
 
+@font-face {
+  font-family: 'Posca Mad Thrasherz';
+  src:url('fonts/Posca-Mad-ThrasherzRegular.ttf.woff') format('woff'),
+  url('fonts/Posca-Mad-ThrasherzRegular.ttf.svg#Posca-Mad-ThrasherzRegular') format('svg'),
+  url('fonts/Posca-Mad-ThrasherzRegular.ttf.eot'),
+  url('fonts/Posca-Mad-ThrasherzRegular.ttf.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @header-bg: #fcfaf6;
+
+@bg: #f5efe2;
 
 //720: 126 : 166 : 378
 //940: 164 : 218 : 494
@@ -209,6 +221,35 @@ h1#PageTitle .Options {
     &:after{
       content: ".";
       clear: left;
+    }
+  }
+}
+
+blockquote {
+  border-left: 0;
+}
+
+body {
+  background-color: @bg;
+}
+
+.Breadcrumbs, .well, .page-footer {
+  background-color: white;
+}
+
+.Breadcrumbs {
+  border: 1px solid @well-border;
+}
+
+.page-footer {
+  img {
+    height: 20px;
+  }
+
+  .supporters {
+    margin-left: 20px;
+    @media (max-width: 600px) {
+      display: none;
     }
   }
 }

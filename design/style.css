@@ -11056,6 +11056,12 @@ img.jcrop-preview {
   vertical-align: top;
   line-height: 20px;
 }
+@font-face {
+  font-family: 'Posca Mad Thrasherz';
+  src: url('fonts/Posca-Mad-ThrasherzRegular.ttf.woff') format('woff'), url('fonts/Posca-Mad-ThrasherzRegular.ttf.svg#Posca-Mad-ThrasherzRegular') format('svg'), url('fonts/Posca-Mad-ThrasherzRegular.ttf.eot'), url('fonts/Posca-Mad-ThrasherzRegular.ttf.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 .header {
   height: 126px;
   background: #fcfaf6 url("muur.jpg") no-repeat center;
@@ -11255,6 +11261,32 @@ h1#PageTitle .Options {
   .MessageForm .Buttons:after {
     content: ".";
     clear: left;
+  }
+}
+blockquote {
+  border-left: 0;
+}
+body {
+  background-color: #f5efe2;
+}
+.Breadcrumbs,
+.well,
+.page-footer,
+.SearchForm {
+  background-color: white;
+}
+.Breadcrumbs {
+  border: 1px solid #e3e3e3;
+}
+.page-footer img {
+  height: 20px;
+}
+.page-footer .supporters {
+  margin-left: 20px;
+}
+@media (max-width: 600px) {
+  .page-footer .supporters {
+    display: none;
   }
 }
 
